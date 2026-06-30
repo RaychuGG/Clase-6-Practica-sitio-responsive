@@ -1,0 +1,214 @@
+$color-rojo: #AA1535;
+$gris-oscuro: #585858;
+$gris-texto: #7F8C8D;
+$gris-borde: #DDDDDD;
+$gris-superior: #E8E8E8;
+$gris-footer: #E5E5E5;
+$gris-card: #F4F4F4;
+$blanco: #FFFFFF;
+
+$fuente-principal: arial, sans-serif;
+
+// Tablet 
+@media (max-width: 768px){
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+// Mobile
+@media (max-width: 480px){
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero h2,
+    .products h3,
+    .inferior h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
+
+@mixin titulo-rojo($size) {
+    color: $color-rojo;
+    font-size: $size;
+    font-weight: bold;
+}
+
+@mixin parrafo {
+    color: $gris-texto;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@mixin tarjeta{
+    background-color: $gris-card;
+    border: 1px solid $gris-borde;
+    padding: 25px;
+    flex: 1;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-principal;
+    background-color: $blanco;
+}
+
+.top-bar {
+    background-color: $gris-superior;
+    height: 15px;
+}
+
+.container {
+    width:90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    h1 {
+        font-size: 32px;
+        color: $gris-oscuro;
+        font-weight: normal;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    border-bottom: 2px solid $gris-borde;
+    padding: 15px 0;
+    margin-top: 20px;
+
+    a {
+        text-decoration: none;
+        color: $gris-oscuro;
+        font-size: 15px;
+    }
+}
+
+.hero {
+    margin-top: 25px;
+
+    h2 {
+        @include titulo-rojo(28px);
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    p {
+        @include parrafo;
+    }
+}
+
+.products {
+
+    h3 {
+        @include titulo-rojo(22px);
+        margin: 20px 0;
+    }
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap:wrap;
+}
+
+.card {
+    @include tarjeta;
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 10px;
+        color: $gris-oscuro;
+    }
+
+    p {
+        @include parrafo;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+        float: right;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: $color-rojo;
+        font-size: 13px;
+    }
+
+    .inferior{
+
+        h2{
+            @include titulo-rojo(20px);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p{
+            @include parrafo;
+        }
+    }
+
+    footer {
+        background-color: $gris-footer;
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+        color: $color-rojo;
+        font-size: 13px;
+    }
+}

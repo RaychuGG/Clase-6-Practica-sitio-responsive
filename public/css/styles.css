@@ -1,0 +1,173 @@
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .hero h2,
+  .products h3,
+  .inferior h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  footer {
+    text-align: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background-color: #FFFFFF;
+}
+
+.top-bar {
+  background-color: #E8E8E8;
+  height: 15px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 32px;
+  color: #585858;
+  font-weight: normal;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #DDDDDD;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+.nav a {
+  text-decoration: none;
+  color: #585858;
+  font-size: 15px;
+}
+
+.hero {
+  margin-top: 25px;
+}
+.hero h2 {
+  color: #AA1535;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.hero p {
+  color: #7F8C8D;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.products h3 {
+  color: #AA1535;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #F4F4F4;
+  border: 1px solid #DDDDDD;
+  padding: 25px;
+  flex: 1;
+  position: relative;
+}
+.card h4 {
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #585858;
+}
+.card p {
+  color: #7F8C8D;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.card img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  float: right;
+  margin-bottom: 10px;
+}
+.card a {
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #AA1535;
+  font-size: 13px;
+}
+.card .inferior h2 {
+  color: #AA1535;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.card .inferior p {
+  color: #7F8C8D;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.card footer {
+  background-color: #E5E5E5;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  color: #AA1535;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=styles.css.map */
